@@ -33,7 +33,7 @@ def xgmethod(X,Y):
     xgtrain = xgb.DMatrix(X_train, label=y_train)
     
    
-    model = XGBClassifier(max_depth=6, learning_rate=0.3, n_estimators=100)
+    model = XGBClassifier(max_depth=6, learning_rate=0.3, n_estimators=100,objective='binary:logistic')
     xgb_param = model.get_xgb_params()
     
     print ('Start cross validation')
